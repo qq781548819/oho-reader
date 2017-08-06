@@ -3,14 +3,9 @@
 
 实现追书神器核心功能，做到小说阅读的极简体验，把每一分流量都用到刀刃上！
 
-Github项目地址:[https://github.com/ShanaMaid/oho-reader](https://github.com/ShanaMaid/oho-reader)
-
-欢迎`issue`，`pr`，`star` or `follow`！我将继续开源更多有趣的项目
-
-推荐一个之前用Vue全家桶写的 [网易云音乐PC端 web版本](https://github.com/ShanaMaid/vue-163-music)
 
 ## 在线版
-[http://119.29.159.156:3001/](http://119.29.159.156:3001/)
+[http://120.77.83.195:3002/](http://120.77.83.195:3002/)
 
 ## 部分效果截图
 ![3](screenshot/3.gif)
@@ -129,43 +124,6 @@ proxy: {
 }
 ```
 
-实际环境中，服务器端配置
-```
-var express = require('express');
-var proxy = require('http-proxy-middleware');
+## 之后会借鉴该原作者大大，用vue重写一遍
 
-var app = express();
-app.use('/static', express.static('static'));
-app.use('/assets', express.static('assets'));
-app.use('/api', proxy({
-  target: 'http://api.zhuishushenqi.com/',
-  pathRewrite: {'^/api' : '/'}, 
-  changeOrigin: true
-}
-));
-
-app.use('/chapter', proxy({
-  target: 'http://chapter2.zhuishushenqi.com/',
-  pathRewrite: {'^/chapter' : '/chapter'},
-  changeOrigin: true
-}
-));
-
-app.get('/*', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
-app.listen(3001);
-```
-
-## 支持
-BUG提交请发送邮箱: uestczeng@gmail.com
-
-欢迎`issue`，`pr`，`star` or `follow`！我将继续开源更多有趣的项目
-
-[你可以在这里打赏我](http://blog.shanamaid.top/sponsor/)
-
-你的支持将有助于项目维护以及提高用户体验，感谢各位的支持！
-
-## 特别鸣谢
-感谢[@hieixu](https://github.com/hieixu)对本项目的长期跟进，提出了许多`issue`改进用户体验以及打赏支持
-
+既磨练react的框架开发模式，也加深vue的开发经验。
