@@ -16,7 +16,7 @@ class Read extends React.Component{
     this.pos = this.props.match.params.id; //书籍在列表的序号
     this.index = storejs.get('bookList')[this.pos].readIndex || 0; //章节号
     this.chapterList = storejs.get('bookList')[this.pos].list.chapters;
-    this.readSetting = storejs.get('readSetting') || {fontSize: '18', backgroundColor: 'rgb(196, 196 ,196)'};
+    this.readSetting = storejs.get('readSetting') || {fontSize: '18', backgroundColor: 'rgb(244, 244 ,244)'};
     this.state = {
       loading: true,
       chapter: '',
@@ -260,7 +260,7 @@ class Read extends React.Component{
                             <span onClick={this.fontUp}>Aa +</span>
                           </div>
                           <div className={styles.color}>
-                            <i onClick={this.changeBackgroudnColor} style={{backgroundColor: 'rgb(196, 196 ,196)'}}></i>
+                            <i onClick={this.changeBackgroudnColor} style={{backgroundColor: 'rgb(244, 244 ,244)'}}></i>
                             <i onClick={this.changeBackgroudnColor} style={{backgroundColor: 'rgb(162, 157, 137)'}}></i>
                             <i onClick={this.changeBackgroudnColor} style={{backgroundColor: 'rgb(173, 200, 169)'}}></i>
                           </div>
